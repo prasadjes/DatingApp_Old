@@ -17,12 +17,12 @@ namespace DatingApp.API.Data
         {
             var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == username);
             if(user == null)
-            return null;
+                return null;
 
-             if(!VerifyPasswordHash(password,user.PasswordHash,user.PasswordSalt))
-             return null;
+            if(!VerifyPasswordHash(password,user.PasswordHash,user.PasswordSalt))
+                return null;
 
-             return user;
+            return user;
 
         }
 
