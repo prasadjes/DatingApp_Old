@@ -16,7 +16,7 @@
   
       <div *ngIf="loggedIn()" class="dropdown" dropdown>
         <a class="dropdown-toggle text-light"  dropdownToggle>
-          Welcome {{authService.decodedtoken?.nameid[1] | titlecase}}
+          Welcome {{authService.decodedtoken?.unique_name | titlecase}}
         </a>
       
         <div class="dropdown-menu mt-3" *dropdownMenu>
